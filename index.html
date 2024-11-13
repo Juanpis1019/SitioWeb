@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casos criminales</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .carousel-item img {
+            height: 500px;
+            object-fit: cover;
+        }
+        .carousel-caption {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            bottom: 40px;
+        }
+        .carousel-caption h3 {
+            color: black;
+            font-weight: bold;
+            margin: 0;
+            text-shadow: none;
+        }
+        .carousel-caption p {
+            color: black;
+            margin: 10px 0 0 0;
+            text-shadow: none;
+        }
+        .section-content {
+            padding: 40px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .case-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .case-header {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .highlight-box {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #0d6efd;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Casos Criminales</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Casos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#memphis">Los tres de West Memphis</a></li>
+                            <li><a class="dropdown-item" href="#jonbenet">JonBenét Ramsey</a></li>
+                            <li><a class="dropdown-item" href="#turistas">Las turistas francesas</a></li>
+                            <li><a class="dropdown-item" href="#junko">Junko Furuta</a></li>
+                            <li><a class="dropdown-item" href="#hellokitty">Hello Kitty</a></li>
+                        </ul>
+                    </li>
+                    <input class="form-control me-2" type="search" placeholder="Buscar caso...">
+                    <button class="btn btn-outline-light" type="submit">Buscar</button>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="carousel slide" id="mainCarousel" data-bs-ride="carousel" data-bs-interval="5000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="3"></button>
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="4"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="documental.jpg" class="d-block w-100" alt="West Memphis">
+                    <div class="carousel-caption">
+                        <h3>Los tres de West Memphis</h3>
+                        <p>El caso que conmocionó Arkansas en 1993</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="jonbenet.jpg" class="d-block w-100" alt="JonBenet">
+                    <div class="carousel-caption">
+                        <h3>JonBenét Ramsey</h3>
+                        <p>El misterioso caso sin resolver</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="francesas.jpg" class="d-block w-100" alt="Turistas">
+                    <div class="carousel-caption">
+                        <h3>Las turistas francesas</h3>
+                        <p>Un caso que impactó a dos naciones</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="junko.jpg" class="d-block w-100" alt="Junko">
+                    <div class="carousel-caption">
+                        <h3>Junko Furuta</h3>
+                        <p>La tragedia que conmocionó Japón</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="kitty.jpg" class="d-block w-100" alt="Hello Kitty">
+                    <div class="carousel-caption">
+                        <h3>Hello Kitty</h3>
+                        <p>El caso que cambió una imagen inocente</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div class="container mt-5">
+            <section id="inicio" class="section-content">
+                <div class="case-header">
+                    <h1 class="display-4 text-center">Casos Criminales Sin Resolver</h1>
+                    <p class="lead text-center">Explorando los misterios más intrigantes de la historia criminal moderna</p>
+                </div>
+                <div class="highlight-box">
+                    <h4>Advertencia</h4>
+                    <p>El contenido presentado en esta página contiene información sobre casos criminales reales. Se recomienda discreción al lector.</p>
+                </div>
+            </section>
+
+            <section id="memphis" class="section-content">
+                <h2 class="display-6">Los tres de West Memphis</h2>
+                <div class="row">
+                    <div class="col-md-8">
+                        <p class="lead">El 5 de mayo de 1993, tres niños de ocho años desaparecieron en West Memphis, Arkansas. Sus cuerpos fueron encontrados al día siguiente, marcando el inicio de uno de los casos más controvertidos en la historia criminal estadounidense.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="documental.jpg" alt="West Memphis Three" class="case-img">
+                    </div>
+                </div>
+            </section>
+
+            <section id="jonbenet" class="section-content">
+                <h2 class="display-6">JonBenét Ramsey</h2>
+                <div class="row">
+                    <div class="col-md-8">
+                        <p class="lead">El 25 de diciembre de 1996, JonBenét Ramsey, una niña de seis años, fue encontrada muerta en el sótano de su casa en Boulder, Colorado. Su caso sigue siendo uno de los crímenes sin resolver más polémicos en los EE.UU.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="jonbenet.jpg" alt="JonBenét Ramsey" class="case-img">
+                    </div>
+                </div>
+            </section>
+
+            <section id="turistas" class="section-content">
+                <h2 class="display-6">Las turistas francesas</h2>
+                <div class="row">
+                    <div class="col-md-8">
+                        <p class="lead">En 2011, dos jóvenes turistas francesas fueron asesinadas en Argentina. El caso generó tensión internacional y sigue siendo recordado por la brutalidad del crimen y sus complicaciones judiciales.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="francesas.jpg" alt="Las turistas francesas" class="case-img">
+                    </div>
+                </div>
+            </section>
+
+            <section id="junko" class="section-content">
+                <h2 class="display-6">Junko Furuta</h2>
+                <div class="row">
+                    <div class="col-md-8">
+                        <p class="lead">Junko Furuta fue secuestrada y sometida a tortura extrema durante 44 días en 1988. Su caso destaca por la brutalidad del crimen y provocó un cambio en las leyes penales de Japón.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="junko.jpg" alt="Junko Furuta" class="case-img">
+                    </div>
+                </div>
+            </section>
+
+            <section id="hellokitty" class="section-content">
+                <h2 class="display-6">Hello Kitty</h2>
+                <div class="row">
+                    <div class="col-md-8">
+                        <p class="lead">Conocido como el caso "Hello Kitty", en 1999 se descubrió el asesinato de una mujer en Hong Kong. El caso fue denominado así por la cabeza de la víctima, que fue hallada dentro de una muñeca de Hello Kitty.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="kitty.jpg" alt="Hello Kitty Case" class="case-img">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0">© 2024 Casos Criminales | Información de contacto: <a href="N/N" class="text-white">N/N</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
